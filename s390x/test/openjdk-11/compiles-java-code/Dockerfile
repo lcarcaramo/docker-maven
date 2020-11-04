@@ -6,4 +6,4 @@ COPY . /usr/src
 
 WORKDIR /usr/src/test
 
-CMD [ "mvn", "-X", "clean", "compile" ]
+CMD [ "mvn", "clean", "compile" ]
