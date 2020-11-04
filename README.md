@@ -27,11 +27,11 @@ CMD [ "mvn", "valid", "maven" "options" ]
 
 * Build the image.
 
-`docker build . --tag <maven build image>`
+`docker build . --tag <custom maven image>`
 
 * Run a container using the image that you just built to perform the Maven operation specified in the image on your Maven project.
 
-`docker run --name <maven build container> <maven build image>`
+`docker run --name <maven container> <custom maven image>`
 
 
 # Multi-stage Builds
