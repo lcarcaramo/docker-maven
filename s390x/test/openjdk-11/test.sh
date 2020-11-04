@@ -51,5 +51,5 @@ suite_start
         print_test_case "Image can be used to complie a Java program:"
                 build "compiles-java-code"
                 docker run --rm --name compiles-java-code "compiles-java-code"
-                cleanup "compliles-java-code"
+                cleanup "compiles-java-code"
 suite_end
