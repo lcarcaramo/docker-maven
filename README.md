@@ -48,7 +48,7 @@ COPY . .
 RUN mvn -B -e -o -T 1C verify
 
 # package without maven
-FROM openjdk
+FROM quay.io/ibmz/openjdk:11.0.8
 COPY --from=0 /usr/src/app/target/*.jar ./
 ```
 
