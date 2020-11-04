@@ -1,6 +1,6 @@
 FROM quay.io/ibmz/maven:3.6.3
 
-RUN apt-get install -y ca-certificates-java
+RUN apt-get install -y ca-certificates
 
 COPY . /usr/src
 
