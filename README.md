@@ -1,63 +1,6 @@
-docker-maven
-============
-
-# Supported tags and respective Dockerfile links
-
-Images are published under:
-
-* [`csanchez/maven`](https://hub.docker.com/r/csanchez/maven)
-* [`maven`](https://hub.docker.com/_/maven) (linux and extending Docker official images only)
-* [`ghcr.io/carlossg/maven`](https://github.com/users/carlossg/packages/container/maven) (linux only)
-
-## Linux Based Images
-
-See Docker Hub or GitHub Container Registry for an updated list of tags
-
-* [openjdk-8](https://github.com/carlossg/docker-maven/blob/master/openjdk-8/Dockerfile)
-* [openjdk-8-slim](https://github.com/carlossg/docker-maven/blob/master/openjdk-8-slim/Dockerfile)
-* [openjdk-11](https://github.com/carlossg/docker-maven/blob/master/openjdk-11/Dockerfile)
-* [openjdk-11-slim](https://github.com/carlossg/docker-maven/blob/master/openjdk-11-slim/Dockerfile)
-* [openjdk-14](https://github.com/carlossg/docker-maven/blob/master/openjdk-14/Dockerfile)
-* [openjdk-14-slim](https://github.com/carlossg/docker-maven/blob/master/openjdk-14-slim/Dockerfile)
-* [openjdk-15](https://github.com/carlossg/docker-maven/blob/master/openjdk-15/Dockerfile)
-* [openjdk-15-slim](https://github.com/carlossg/docker-maven/blob/master/openjdk-15-slim/Dockerfile)
-* [openjdk-16](https://github.com/carlossg/docker-maven/blob/master/openjdk-16/Dockerfile)
-* [openjdk-16-slim](https://github.com/carlossg/docker-maven/blob/master/openjdk-16-slim/Dockerfile)
-* [adoptopenjdk-8](https://github.com/carlossg/docker-maven/blob/master/adoptopenjdk-8/Dockerfile)
-* [adoptopenjdk-8-openj9](https://github.com/carlossg/docker-maven/blob/master/adoptopenjdk-8-openj9/Dockerfile)
-* [adoptopenjdk-11](https://github.com/carlossg/docker-maven/blob/master/adoptopenjdk-11/Dockerfile)
-* [adoptopenjdk-11-openj9](https://github.com/carlossg/docker-maven/blob/master/adoptopenjdk-11-openj9/Dockerfile)
-* [adoptopenjdk-14](https://github.com/carlossg/docker-maven/blob/master/adoptopenjdk-14/Dockerfile)
-* [adoptopenjdk-14-openj9](https://github.com/carlossg/docker-maven/blob/master/adoptopenjdk-14-openj9/Dockerfile)
-* [adoptopenjdk-15](https://github.com/carlossg/docker-maven/blob/master/adoptopenjdk-15/Dockerfile)
-* [adoptopenjdk-15-openj9](https://github.com/carlossg/docker-maven/blob/master/adoptopenjdk-15-openj9/Dockerfile)
-* [ibmjava-8](https://github.com/carlossg/docker-maven/blob/master/ibmjava-8/Dockerfile)
-* [ibmjava-8-alpine](https://github.com/carlossg/docker-maven/blob/master/ibmjava-8-alpine/Dockerfile)
-* [amazoncorretto-8](https://github.com/carlossg/docker-maven/blob/master/amazoncorretto-8/Dockerfile)
-* [amazoncorretto-11](https://github.com/carlossg/docker-maven/blob/master/amazoncorretto-11/)
-
-Only under `csanchez/maven` and `ghcr.io/carlossg/maven`:
-
-* [azulzulu-11](https://github.com/carlossg/docker-maven/blob/master/azulzulu-11/Dockerfile)
-* [libericaopenjdk-11](https://github.com/carlossg/docker-maven/blob/master/libericaopenjdk-11/Dockerfile)
-* [libericaopenjdk-11-alpine](https://github.com/carlossg/docker-maven/blob/master/libericaopenjdk-11-alpine/Dockerfile)
-* [libericaopenjdk-8](https://github.com/carlossg/docker-maven/blob/master/libericaopenjdk-8/Dockerfile)
-* [libericaopenjdk-8-alpine](https://github.com/carlossg/docker-maven/blob/master/libericaopenjdk-8-alpine/Dockerfile)
-
-## Windows Based Images
-
-See Docker Hub [`csanchez/maven`](https://hub.docker.com/r/csanchez/maven) for an updated list of tags
-
-* [openjdk-8-windows](https://github.com/carlossg/docker-maven/blob/master/windows/Dockerfile.windows-openjdk-8)
-* [openjdk-8-windows-nanoserver](https://github.com/carlossg/docker-maven/blob/master/windows/Dockerfile.windows-openjdk-8-nanoserver)
-* [openjdk-11-windows](https://github.com/carlossg/docker-maven/blob/master/windows/Dockerfile.windows-openjdk-11)
-* [openjdk-11-windows-nanoserver](https://github.com/carlossg/docker-maven/blob/master/windows/Dockerfile.windows-openjdk-11-nanoserver)
-* [openjdk-14-windows](https://github.com/carlossg/docker-maven/blob/master/windows/Dockerfile.windows-openjdk-14)
-* [adoptopenjdk-8-openj9-windows](https://github.com/carlossg/docker-maven/blob/master/windows/Dockerfile.windows-adoptopenjdk-8-openj9)
-* [adoptopenjdk-11-openj9-windows](https://github.com/carlossg/docker-maven/blob/master/windows/Dockerfile.windows-adoptopenjdk-11-openj9)
-* [amazoncorretto-8-windows](https://github.com/carlossg/docker-maven/blob/master/windows/Dockerfile.windows-amazoncorretto-8)
-* [amazoncorretto-11-windows](https://github.com/carlossg/docker-maven/blob/master/windows/Dockerfile.windows-amazoncorretto-11)
-* [azulzulu-11-windows](https://github.com/carlossg/docker-maven/blob/master/windows/Dockerfile.windows-azulzulu-11)
+# Tags
+> _Built from [`quay.io/ibmz/openjdk:11.0.8`](https://quay.io/repository/ibmz/openjdk?tab=info)_
+-	[`3.6.3`](https://github.com/lcarcaramo/docker-maven/blob/master/s390x/openjdk-11/Dockerfile) - [![Build Status](https://travis-ci.com/lcarcaramo/docker-maven.svg?branch=master)](https://travis-ci.com/lcarcaramo/docker-maven)
 
 
 # What is Maven?
@@ -70,36 +13,25 @@ reporting and documentation from a central piece of information.
 
 # How to use this image
 
-You can run a Maven project by using the Maven Docker image directly,
-passing a Maven command to `docker run`:
+* Create a `Dockerfile` to build an image the builds your Maven project.
 
-### Linux
+```
+FROM quay.io/ibmz/maven:3.6.3
 
-    docker run -it --rm --name my-maven-project -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 mvn verify
+COPY . /usr/src
 
-### Windows
+WORKDIR /usr/src/<Your maven project folder>
 
-```powershell
-docker run -it --rm --name my-maven-project -v "$(Get-Location)":C:/Src -w C:/Src csanchez/maven:3.3-jdk-8-windows mvn verify
+CMD [ "mvn", "valid", "maven" "options" ]
 ```
 
-### Windows
+* Build the image.
 
-```powershell
-docker run -it --rm --name my-maven-project -v "$(Get-Location)":C:/Src -w C:/Src maven:3.3-jdk-8-windows mvn clean install
-```
+`docker build . --tag <maven build image>`
 
-## Building local Docker image (optional)
+* Run a container using the image that you just built to build your Maven project.
 
-This is a base image that you can extend, so it has the bare minimum packages needed. If you add custom package(s) to the `Dockerfile`, then you can build your local Docker image like this:
-
-### Linux
-
-    docker build --tag my_local_maven:3.6.0-jdk-8 .
-
-### Windows
-
-    docker build -f Dockerfile.windows --tag my_local_maven:3-jdk-9-windows --build-arg WINDOWS_DOCKER_TAG=1803 .
+`docker run --name <maven build container> <maven build image>`
 
 
 # Multi-stage Builds
@@ -108,7 +40,7 @@ You can build your application with Maven and package it in an image that does n
 
 ```
 # build
-FROM maven
+FROM quay.io/ibmz/maven:3.6.3
 WORKDIR /usr/src/app
 COPY pom.xml .
 RUN mvn -B -e -C -T 1C org.apache.maven.plugins:maven-dependency-plugin:3.1.1:go-offline
@@ -127,10 +59,6 @@ The local Maven repository can be reused across containers by creating a volume 
     docker volume create --name maven-repo
     docker run -it -v maven-repo:/root/.m2 maven mvn archetype:generate # will download artifacts
     docker run -it -v maven-repo:/root/.m2 maven mvn archetype:generate # will reuse downloaded artifacts
-
-Or you can just use your home .m2 cache directory that you share e.g. with your Eclipse/IDEA:
-
-    docker run -it --rm -v "$PWD":/usr/src/mymaven -v "$HOME/.m2":/root/.m2 -v "$PWD/target:/usr/src/mymaven/target" -w /usr/src/mymaven maven mvn package  
 
 
 # Packaging a local repository with the image
@@ -165,85 +93,6 @@ For example, to run as user `1000` mounting the host' Maven repo
     docker run -v ~/.m2:/var/maven/.m2 -ti --rm -u 1000 -e MAVEN_CONFIG=/var/maven/.m2 maven mvn -Duser.home=/var/maven archetype:generate
 
 
-# Image Variants
-
-The `maven` images come in many flavors, each designed for a specific use case.
-
-## `maven:<version>`
-
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-# Building
-
-Build with the usual
-
-    docker build -t maven .
-
-Tests are written using [bats](https://github.com/sstephenson/bats) for Linux images and [pester](https://github.com/pester/Pester) for Windows images 
-(requires Pester 4.x) under the `tests` dir.
-
-Use the env var TAG to choose what image to run tests against.
-
-### Linux
-    TAG=jdk-11 bats tests
-
-### Windows
-```powershell
-$env:TAG="jdk-11" ; Invoke-Pester -Path tests
-```
-
-or run all the tests with
-
-### Linux
-    for dir in $(/bin/ls -1 -d */ | grep -v 'tests\|windows'); do TAG=$(basename $dir) bats tests; done
-
-### Windows
-```powershell
-Get-ChildItem -Path windows\* -File -Include "Dockerfile.windows-*" | ForEach-Object { Push-Location ; $env:TAG=$_.Name.Replace('Dockerfile.windows-', '') ; Invoke-Pester -Path tests ; Pop-Location }
-```
-
-### Windows
-```powershell
-Get-ChildItem -Path windows\* -File -Include "Dockerfile.windows-*" | ForEach-Object { Push-Location ; $env:TAG=$_.Name.Replace('Dockerfile.windows-', '') ; Invoke-Pester -Path tests ; Pop-Location }
-```
-
-Bats can be easily installed with `brew install bats` on OS X.
-
-Note that you may first need to:
-
-```sh
-git submodule init
-git submodule update
-```
-
-Pester comes with most modern Windows (Windows 10 and Windows Server 2019), but is an older version than required. You may need to follow [this tutorial](https://blog.damianflynn.com/Windows10-Pester/) on upgrading Pester to 4.x.
-
-
-## Publishing to Docker Hub
-
-In order to publish the images a PR needs to be opened against [docker-library/official-images](https://github.com/docker-library/official-images)
-
-For that we use `publish.sh` that runs `generate-stackbrew-library.sh`
-
 # License
 
 View [license information](https://www.apache.org/licenses/) for the software contained in this image.
-
-
-# User Feedback
-
-## Issues
-
-If you have any problems with or questions about this image, please contact us
-through a [GitHub issue](https://github.com/carlossg/docker-maven/issues).
-
-You can also reach many of the official image maintainers via the `#docker-library` IRC channel on Freenode.
-
-## Contributing
-
-You are invited to contribute new features, fixes, or updates, large or small; we are always thrilled to receive pull requests, and do our best to process them as fast as we can.
-
-Before you start to code, we recommend discussing your plans through a [GitHub issue](https://github.com/carlossg/docker-maven/issues),
-especially for more ambitious contributions.
-This gives other contributors a chance to point you in the right direction,
-give you feedback on your design, and help you find out if someone else is working on the same thing.
