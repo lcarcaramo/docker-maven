@@ -29,7 +29,7 @@ CMD [ "mvn", "valid", "maven" "options" ]
 
 `docker build . --tag <maven build image>`
 
-* Run a container using the image that you just built to perform an operation on your Maven project.
+* Run a container using the image that you just built to perform the Maven operation specified in the image on your Maven project.
 
 `docker run --name <maven build container> <maven build image>`
 
