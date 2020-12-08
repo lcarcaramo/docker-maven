@@ -1,9 +1,10 @@
 # Tags
-> _Built from [`quay.io/ibmz/openjdk:11.0.8`](https://quay.io/repository/ibmz/openjdk?tab=info)_
--	[`3.6.3`](https://github.com/lcarcaramo/docker-maven/blob/master/s390x/openjdk-11/Dockerfile) - [![Build Status](https://travis-ci.com/lcarcaramo/docker-maven.svg?branch=master)](https://travis-ci.com/lcarcaramo/docker-maven)
+> _Built from [`quay.io/ibm/openjdk:11.0.8`](https://quay.io/repository/ibm/openjdk?tab=info)_
+-	`3.6.3` - [![Build Status](https://travis-ci.com/lcarcaramo/docker-maven.svg?branch=master)](https://travis-ci.com/lcarcaramo/docker-maven)
 
+### __[Original Source Code](https://github.com/carlossg/docker-maven)__
 
-# What is Maven?
+# Maven
 
 [Apache Maven](http://maven.apache.org) is a software project management and comprehension tool.
 Based on the concept of a project object model (POM),
@@ -16,7 +17,7 @@ reporting and documentation from a central piece of information.
 * Create a `Dockerfile` to build an image the builds your Maven project.
 
 ```
-FROM quay.io/ibmz/maven:3.6.3
+FROM quay.io/ibm/maven:3.6.3
 
 COPY . /usr/src
 
@@ -40,7 +41,7 @@ You can build your application with Maven and package it in an image that does n
 
 ```
 # build
-FROM quay.io/ibmz/maven:3.6.3
+FROM quay.io/ibm/maven:3.6.3
 WORKDIR /usr/src/app
 COPY pom.xml .
 RUN mvn -B -e -C -T 1C org.apache.maven.plugins:maven-dependency-plugin:3.1.1:go-offline
@@ -48,7 +49,7 @@ COPY . .
 RUN mvn -B -e -o -T 1C verify
 
 # package without maven
-FROM quay.io/ibmz/openjdk:11.0.8
+FROM quay.io/ibm/openjdk:11.0.8
 COPY --from=0 /usr/src/app/target/*.jar ./
 ```
 
@@ -57,8 +58,8 @@ COPY --from=0 /usr/src/app/target/*.jar ./
 The local Maven repository can be reused across containers by creating a volume and mounting it in `/root/.m2`.
 
     docker volume create --name maven-repo
-    docker run -it -v maven-repo:/root/.m2 quay.io/ibmz/maven:3.6.3 mvn archetype:generate # will download artifacts
-    docker run -it -v maven-repo:/root/.m2 quay.io/ibmz/maven:3.6.3 mvn archetype:generate # will reuse downloaded artifacts
+    docker run -it -v maven-repo:/root/.m2 quay.io/ibm/maven:3.6.3 mvn archetype:generate # will download artifacts
+    docker run -it -v maven-repo:/root/.m2 quay.io/ibm/maven:3.6.3 mvn archetype:generate # will reuse downloaded artifacts
 
 
 # Packaging a local repository with the image
@@ -90,7 +91,7 @@ Maven needs the user home to download artifacts to, and if the user does not exi
 
 For example, to run as user `1000` mounting the host' Maven repo
 
-    docker run -v maven-repo:/var/maven/.m2 -ti --rm -u 1000 -e MAVEN_CONFIG=/var/maven/.m2 quay.io/ibmz/maven:3.6.3 mvn -Duser.home=/var/maven archetype:generate
+    docker run -v maven-repo:/var/maven/.m2 -ti --rm -u 1000 -e MAVEN_CONFIG=/var/maven/.m2 quay.io/ibm/maven:3.6.3 mvn -Duser.home=/var/maven archetype:generate
 
 
 # License
